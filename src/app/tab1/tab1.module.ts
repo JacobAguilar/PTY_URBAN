@@ -6,6 +6,8 @@ import { Tab1Page } from './tab1.page';
 import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
 
 import { Tab1PageRoutingModule } from './tab1-routing.module';
+import { HTTP } from '@ionic-native/http/ngx';
+
 
 @NgModule({
   imports: [
@@ -13,8 +15,9 @@ import { Tab1PageRoutingModule } from './tab1-routing.module';
     CommonModule,
     FormsModule,
     ExploreContainerComponentModule,
-    Tab1PageRoutingModule
+    Tab1PageRoutingModule,
   ],
+  providers:[HTTP],
   declarations: [Tab1Page]
 })
 export class Tab1PageModule {}

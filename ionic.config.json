@@ -1,5 +1,8 @@
 {
   "name": "PTY_URBAN",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
   "type": "angular"
 }

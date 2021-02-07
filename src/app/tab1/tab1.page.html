@@ -1,17 +1,71 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Tarjetas y Saldos
     </ion-title>
+    <ion-button slot="end" disabled={{!data}} (click)='getSaldos()'>
+      <ion-icon slot="icon-only" name="refresh-outline"></ion-icon>
+    </ion-button>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <!-- Card View -->
+  <ion-card>
+    <ion-item>
+      <ion-icon name="card-outline" slot="start"></ion-icon>
+      <ion-label>Tarjeta 1</ion-label>
+      <ion-button fill="outline" slot="end">Editar</ion-button>
+    </ion-item>
+
+    <ion-card-content>
+      <!-- <ion-grid>
+        <ion-row> -->
+      <!-- Esquema si hay datos consultados -->
+      <div *ngIf="data">
+        Tarjeta:
+        <ion-item>
+          <ion-label slot="end"> {{Tarjeta.no_tarjeta}} </ion-label>
+        </ion-item>
+        Balance:
+        <ion-item>
+          <ion-label slot="end"> {{Tarjeta.saldo}}</ion-label>
+        </ion-item>
+        Estado:
+        <ion-item>
+          <ion-label slot="end">{{Tarjeta.estadoContrato}}</ion-label>
+        </ion-item>
+        Fecha Saldo:
+        <ion-item>
+          <ion-label slot="end">{{Tarjeta.fechaSaldo}}</ion-label>
+        </ion-item>
+      </div>
+
+      <!-- Esquema si esta consultando -->
+      <div *ngIf="!data">
+        Tarjeta:
+        <ion-item>
+          <ion-label slot="end"> <ion-skeleton-text animated style="width: 100%"></ion-skeleton-text> </ion-label>
+        </ion-item>
+        Balance:
+        <ion-item>
+          <ion-label slot="end"> <ion-skeleton-text animated style="width: 100%"></ion-skeleton-text></ion-label>
+        </ion-item>
+        Estado:
+        <ion-item>
+          <ion-label slot="end"><ion-skeleton-text animated style="width: 100%"></ion-skeleton-text></ion-label>
+        </ion-item>
+        Fecha Saldo:
+        <ion-item>
+          <ion-label slot="end"><ion-skeleton-text animated style="width: 100%"></ion-skeleton-text></ion-label>
+        </ion-item>
+      </div>
+
+      <!-- </ion-row>
+      </ion-grid> -->
+
+    </ion-card-content>
+  </ion-card>
+
 </ion-content>

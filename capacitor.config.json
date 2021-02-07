@@ -1,0 +1,17 @@
+{
+  "appId": "io.ionic.starter",
+  "appName": "PTY_URBAN",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {},
+  "windows": {
+    "androidStudioPath": "C:\\Program Files\\Android\\Android Studio\\bin\\studio64.exe"
+  },
+  "androidStudioPath": "C:\\Program Files\\Android\\Android Studio\\bin\\studio64.exe"
+}
